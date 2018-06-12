@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+
+
+
+<body>
+    <div id="app">
+        <h1 v-bind:title="titre">ceci est mon titre</h1>
+        {{ message }} {{nom}}
+
+
+        <p v-if="affiche">je suis affiché sous condition</p>
+
+
+        <p>{{prenom}}</p>
+        <input type="text" v-model="prenom">
+
+        <ul>
+            <todo-item v-bind:todo="nom"></todo-item>
+            <li v-for="element in todos">{{ element.text }}</li>
+        </ul>
+
+        <button v-on:click="addTodo">Add todo</button>
+        <button v-on:click="ShowAffiche">Show</button>
+    </div>
+
+
+
+    <script src="./assets/app.js"></script>
+    <script src="./node_modules/vue/dist/vue.js"></script>
+
+</body>
+
+</html>
